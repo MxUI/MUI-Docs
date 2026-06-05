@@ -1,0 +1,56 @@
+site_name: MUI Documentation
+site_description: Multiscale Universal Interface (MUI) Documentation
+site_author: MxUI Development Team
+site_url: https://mui-docs.readthedocs.io
+
+repo_name: MxUI/MUI
+repo_url: https://github.com/MxUI/MUI
+edit_uri: ""
+
+theme:
+  name: material
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+
+  palette:
+    - scheme: default
+      primary: blue
+      accent: blue
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Installation: installation.md
+  - Code Coupling: code-coupling.md
+  - Coupling Algorithms: algorithms.md
+  - Language Wrappers: wrappers.md
