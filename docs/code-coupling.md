@@ -271,6 +271,8 @@ int main(int argc, char ** argv) {
 }
 ```
 
+![Schematic of the domains of the MUI-demo/07-pseudo-diffusion example.](images/demo-7.png)
+
 ## Centralised Configuration
 In MUI, interfaces can be defined in two ways:
 * Using specialised classes (uniface1d/2d/3d with matching `Point` types), or
