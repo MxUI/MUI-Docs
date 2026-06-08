@@ -15,8 +15,6 @@ MUI supports:
 
 The core MUI library is implemented as a header-only C++ library and requires only MPI as an external dependency.
 
----
-
 ## Where to Obtain MUI Library
 
 MUI and its companion repositories are publicly available through the MxUI GitHub organisation.
@@ -48,8 +46,6 @@ A dedicated standalone parameterisable testing and benchmarking application is a
 git clone https://github.com/MxUI/MUI-Testing.git
 ```
 
----
-
 ## Software Requirements
 
 To use MUI with C++ applications, the following software is required:
@@ -65,8 +61,6 @@ Additional requirements may apply when building:
 * C wrappers
 * Fortran wrappers
 * Python wrappers
-
----
 
 ## MUI Architecture
 

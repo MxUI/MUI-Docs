@@ -10,15 +10,11 @@ MUI currently provides wrappers for:
 
 These wrappers allow applications written in different languages to participate in the same coupled simulation while using the same underlying MUI communication framework.
 
----
-
 ## Overview
 
 The language wrappers expose MUI functionality through language-specific interfaces while preserving access to the core capabilities of the library.
 
 The wrappers are designed to minimise the amount of language-specific code required to integrate MUI into an existing solver.
-
----
 
 ## C++ Core Library
 
@@ -29,8 +25,6 @@ The library makes extensive use of template programming and modern C++ language 
 MUI v2.0 deliberately retains C++11 as its baseline language standard. This avoids dependencies on newer C++ features and ensures compatibility with a wide range of compilers and legacy scientific software environments. As a result, MUI can be integrated into existing HPC applications with minimal disruption to established build systems and workflows.
 
 The language wrappers described below are built on top of this common C++ core and expose its functionality to applications written in other programming languages.
-
----
 
 ## C Wrapper
 
@@ -61,8 +55,6 @@ Examples demonstrating the C wrapper are available in:
 ```text
 MUI-demo/10-wrappers/10-0-C
 ```
-
----
 
 ## Fortran Wrapper
 
@@ -98,8 +90,6 @@ Examples demonstrating the Fortran wrapper are available in:
 MUI-demo/10-wrappers/10-1-Fortran
 ```
 
----
-
 ## Python Wrapper
 
 The Python wrapper is a new addition introduced in MUI-v2.0, and was not available in the earlier version. This wrapper provides a Python API that exposes the full functionality of the MUI-v2.0 library, enabling Python-based codebases and simulation frameworks to integrate MUI with minimal effort. Designed to support scripting workflows and rapid prototyping, the Python wrapper significantly lowers the barrier for using MUI in modern scientific computing environments.
@@ -129,8 +119,6 @@ Examples demonstrating the Python wrapper are available in:
 ```text
 MUI-demo/10-wrappers/10-2-Python
 ```
-
----
 
 ## Wrapper Demonstrations
 
