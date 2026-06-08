@@ -17,7 +17,7 @@ These algorithms can be used in coupled simulations and support restart function
 
 ---
 
-# Overview
+## Overview
 
 In partitioned multiphysics simulations, different solvers exchange interface data iteratively until convergence is achieved.
 
@@ -27,7 +27,7 @@ MUI implements these algorithms directly within the data exchange framework, all
 
 ---
 
-# Aitken Dynamic Relaxation
+## Aitken Dynamic Relaxation
 
 One of the most widely used acceleration techniques for partitioned coupling is Aitken's dynamic relaxation method.
 
@@ -84,7 +84,7 @@ int main(int argc, char ** argv) {
 
 ---
 
-# Creating an Aitken Algorithm Instance
+## Creating an Aitken Algorithm Instance
 
 To use the algorithm, create an instance before entering the coupling loop.
 
@@ -110,7 +110,7 @@ This design allows both fresh and restarted coupling runs.
 
 ---
 
-# Applying the Algorithm
+## Applying the Algorithm
 
 Once constructed, the algorithm object is passed directly to the `fetch()` operation.
 
@@ -128,7 +128,7 @@ MUI automatically applies the relaxation procedure during data retrieval.
 
 ---
 
-# Monitoring Convergence
+## Monitoring Convergence
 
 The current relaxation factor can be queried at runtime.
 
@@ -163,7 +163,7 @@ std::cout
 
 ---
 
-# Fixed Relaxation
+## Fixed Relaxation
 
 MUI also provides fixed-relaxation algorithms.
 
@@ -185,7 +185,7 @@ For strongly coupled problems, Aitken relaxation generally provides faster conve
 
 ---
 
-# Restart Capability
+## Restart Capability
 
 Large multiphysics simulations may require restart functionality after:
 
@@ -214,7 +214,7 @@ algo_aitken1d aitken(urf,
 
 ---
 
-# Dynamic Point Handling
+## Dynamic Point Handling
 
 Many multiphysics simulations involve:
 
@@ -242,7 +242,7 @@ The internal algorithm state is updated automatically when points are added or r
 
 ---
 
-# Strong Coupling with Dual-Time Stepping
+## Strong Coupling with Dual-Time Stepping
 
 Strong coupling often requires several interface iterations within a single physical time step.
 
