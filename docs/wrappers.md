@@ -10,17 +10,13 @@ MUI currently provides wrappers for:
 
 These wrappers allow applications written in different languages to participate in the same coupled simulation while using the same underlying MUI communication framework.
 
----
-
-# Overview
+## Overview
 
 The language wrappers expose MUI functionality through language-specific interfaces while preserving access to the core capabilities of the library.
 
 The wrappers are designed to minimise the amount of language-specific code required to integrate MUI into an existing solver.
 
----
-
-# C++ Core Library
+## C++ Core Library
 
 The core of MUI is implemented in C++11 and forms the foundation of all language interfaces.
 
@@ -30,9 +26,7 @@ MUI v2.0 deliberately retains C++11 as its baseline language standard. This avoi
 
 The language wrappers described below are built on top of this common C++ core and expose its functionality to applications written in other programming languages.
 
----
-
-# C Wrapper
+## C Wrapper
 
 The C wrapper in MUI-v2.0 has undergone a comprehensive redesign to improve usability, dimensional flexibility, and compatibility with modern HPC environments. The previous implementation provided a minimal interface limited to $3-D$ configurations and a small subset of samplers and functions. The new wrapper offers a full-featured, modular interface supporting one-dimensional, two-dimensional and three-dimensional domains, with extensive coverage of samplers, algorithms, and communication utilities.
 
@@ -62,9 +56,7 @@ Examples demonstrating the C wrapper are available in:
 MUI-demo/10-wrappers/10-0-C
 ```
 
----
-
-# Fortran Wrapper
+## Fortran Wrapper
 
 The Fortran wrapper in MUI-v2.0 provides a robust interface for Fortran applications to interact with the C++ core of the MUI library. It achieves this by leveraging the `ISO_C_BINDING` module introduced in Fortran 2003, which allows seamless interoperability between Fortran and C. Internally, the wrapper uses a set of C++ functions declared with extern "C" linkage, which are then exposed to Fortran through corresponding interface modules. These functions wrap around C++ constructs such as `uniface`, `sampler`, and `algorithm` objects, enabling Fortran programs to create, manipulate, and query MUI interfaces without directly dealing with C++ syntax or templates.
 
@@ -98,9 +90,7 @@ Examples demonstrating the Fortran wrapper are available in:
 MUI-demo/10-wrappers/10-1-Fortran
 ```
 
----
-
-# Python Wrapper
+## Python Wrapper
 
 The Python wrapper is a new addition introduced in MUI-v2.0, and was not available in the earlier version. This wrapper provides a Python API that exposes the full functionality of the MUI-v2.0 library, enabling Python-based codebases and simulation frameworks to integrate MUI with minimal effort. Designed to support scripting workflows and rapid prototyping, the Python wrapper significantly lowers the barrier for using MUI in modern scientific computing environments.
 
@@ -130,9 +120,7 @@ Examples demonstrating the Python wrapper are available in:
 MUI-demo/10-wrappers/10-2-Python
 ```
 
----
-
-# Wrapper Demonstrations
+## Wrapper Demonstrations
 
 Examples demonstrating the language wrappers are provided in:
 

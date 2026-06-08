@@ -15,9 +15,7 @@ Currently, MUI provides examples of:
 
 These algorithms can be used in coupled simulations and support restart functionality and dynamic point sets.
 
----
-
-# Overview
+## Overview
 
 In partitioned multiphysics simulations, different solvers exchange interface data iteratively until convergence is achieved.
 
@@ -25,9 +23,7 @@ A simple fixed-point iteration may converge slowly or become unstable. Relaxatio
 
 MUI implements these algorithms directly within the data exchange framework, allowing users to add relaxation behaviour with minimal changes to solver code.
 
----
-
-# Aitken Dynamic Relaxation
+## Aitken Dynamic Relaxation
 
 One of the most widely used acceleration techniques for partitioned coupling is Aitken's dynamic relaxation method.
 
@@ -82,9 +78,7 @@ int main(int argc, char ** argv) {
 }
 ```
 
----
-
-# Creating an Aitken Algorithm Instance
+## Creating an Aitken Algorithm Instance
 
 To use the algorithm, create an instance before entering the coupling loop.
 
@@ -108,9 +102,7 @@ The constructor accepts:
 
 This design allows both fresh and restarted coupling runs.
 
----
-
-# Applying the Algorithm
+## Applying the Algorithm
 
 Once constructed, the algorithm object is passed directly to the `fetch()` operation.
 
@@ -126,9 +118,7 @@ u[6] = interface.fetch("u0",
 
 MUI automatically applies the relaxation procedure during data retrieval.
 
----
-
-# Monitoring Convergence
+## Monitoring Convergence
 
 The current relaxation factor can be queried at runtime.
 
@@ -161,9 +151,7 @@ std::cout
     << std::endl;
 ```
 
----
-
-# Fixed Relaxation
+## Fixed Relaxation
 
 MUI also provides fixed-relaxation algorithms.
 
@@ -183,9 +171,7 @@ Fixed relaxation is often useful when:
 
 For strongly coupled problems, Aitken relaxation generally provides faster convergence because the relaxation factor is updated automatically based on the residual history.
 
----
-
-# Restart Capability
+## Restart Capability
 
 Large multiphysics simulations may require restart functionality after:
 
@@ -212,9 +198,7 @@ algo_aitken1d aitken(urf,
                      previous_residual);
 ```
 
----
-
-# Dynamic Point Handling
+## Dynamic Point Handling
 
 Many multiphysics simulations involve:
 
@@ -240,9 +224,7 @@ MUI-demo/09-algorithms/9-1-Aitken/9-1-2-dynamic_points
 
 The internal algorithm state is updated automatically when points are added or removed.
 
----
-
-# Strong Coupling with Dual-Time Stepping
+## Strong Coupling with Dual-Time Stepping
 
 Strong coupling often requires several interface iterations within a single physical time step.
 
