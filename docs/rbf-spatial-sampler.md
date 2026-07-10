@@ -38,7 +38,7 @@ $$
 or, equivalently,
 
 $$
-\mathbf{s} = \mathbf{H}\vec{\alpha} + \mathbf{p}.
+\mathbf{s} = \mathbf{H}\mathbf{\alpha} + \mathbf{p}.
 $$
 
 The interpolation matrix is
