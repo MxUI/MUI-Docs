@@ -38,7 +38,7 @@ $$
 or, equivalently,
 
 $$
-\mathbf{s} = \mathbf{H}\boldsymbol{\alpha} + \mathbf{p}.
+\mathbf{s} = \mathbf{H}\vec{\alpha} + \mathbf{p}.
 $$
 
 The interpolation matrix is
@@ -191,4 +191,3 @@ Compared with a global RBF formulation, the PoU approach offers:
 Consequently, the PoU-based RBF sampler is well suited to large-scale parallel
 multiphysics coupling applications, where a global dense interpolation matrix
 would otherwise become prohibitively expensive.
-
