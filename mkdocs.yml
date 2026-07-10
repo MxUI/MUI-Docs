@@ -31,6 +31,8 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
 
   - pymdownx.details
   - pymdownx.superfences
@@ -44,6 +46,10 @@ markdown_extensions:
   - toc:
       permalink: true
 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
 plugins:
   - search
 
@@ -52,5 +58,6 @@ nav:
   - Getting Started: getting-started.md
   - Installation: installation.md
   - Code Coupling: code-coupling.md
+  - RBF Spatial Sampler: rbf-spatial-sampler.md
   - Coupling Algorithms: algorithms.md
   - Language Wrappers: wrappers.md
